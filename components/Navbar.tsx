@@ -1,6 +1,7 @@
 import {Box} from "lucide-react";
 import Button from "./ui/Button";
 import {useOutletContext} from "react-router";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
     const { isSignedIn, userName, signIn, signOut } = useOutletContext<AuthContext>()
@@ -31,7 +32,7 @@ const Navbar = () => {
                         <Box  className="logo" />
 
                         <span className="name">
-                            Roomify
+                            Vista AI
                         </span>
                     </div>
 
@@ -44,6 +45,8 @@ const Navbar = () => {
                 </div>
 
                 <div className="actions">
+                    <ThemeToggle />
+
                     {isSignedIn ? (
                         <>
                             <span className="greeting">

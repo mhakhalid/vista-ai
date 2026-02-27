@@ -9,6 +9,7 @@
 <img src="https://img.shields.io/badge/-React-61DAFB?style=for-the-badge&logo=React&logoColor=black" />
 <img src="https://img.shields.io/badge/-Typescript-3178C6?style=for-the-badge&logo=Typescript&logoColor=white" />
 <img src="https://img.shields.io/badge/-Tailwind-06B6D4?style=for-the-badge&logo=Tailwind-CSS&logoColor=white" />
+<img src="https://img.shields.io/badge/-Vite-646CFF?style=for-the-badge&logo=Vite&logoColor=white" />
 <img src="https://img.shields.io/badge/-Puter-A855F7?style=for-the-badge&logo=Puter&logoColor=white" /><br/>
 <img src="https://img.shields.io/badge/-Claude-D97757?style=for-the-badge&logo=Anthropic&logoColor=white" />
 <img src="https://img.shields.io/badge/-Gemini-4285F4?style=for-the-badge&logo=Google-Gemini&logoColor=white" />
@@ -16,37 +17,45 @@
 
   </div>
 
-  <h3 align="center">Roomify | AI-powered Architectural Visualization App</h3>
+  <h3 align="center">Vista AI | AI-powered Architectural Visualization App</h3>
 
    <div align="center">
-     Build this project step by step with our detailed tutorial on <a href="https://www.youtube.com/watch?v=XUkNR-JfHwo" target="_blank"><b>JavaScript Mastery</b></a> YouTube. Join the JSM family!
+     Forked from <a href="https://github.com/adrianhajdin/roomify" target="_blank"><b>Roomify</b></a> by adrianhajdin. Extended with new features by <b>Muhammad Hamid Ali Khalid</b>.
     </div>
 </div>
 
 ## 📋 <a name="table">Table of Contents</a>
 
 1. ✨ [Introduction](#introduction)
-2. ⚙️ [Tech Stack](#tech-stack)
-3. 🔋 [Features](#features)
-4. 🤸 [Quick Start](#quick-start)
-5. 🔗 [Assets](#links)
-6. 🚀 [More](#more)
+2. 🆕 [New Features](#new-features)
+3. ⚙️ [Tech Stack](#tech-stack)
+4. 🔋 [Features](#features)
+5. 🤸 [Quick Start](#quick-start)
+6. 🔗 [Assets](#links)
+7. 🚀 [More](#more)
 
-## 🚨 Tutorial
-
-This repository contains the code corresponding to an in-depth tutorial available on our YouTube channel, <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a>.
-
-If you prefer visual learning, this is the perfect resource for you. Follow our tutorial to learn how to build projects like these step-by-step in a beginner-friendly manner!
-
-<a href="https://youtu.be/JiwTGGGIhDs" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/1736fca5-a031-4854-8c09-bc110e3bc16d" /></a>
-
-## <a name="introduction">✨ Introduction</a>
+## ✨ <a name="introduction">Introduction</a>
 
 AI-powered architectural visualization SaaS built with React, TypeScript, and Puter. Use AI models from Claude to Gemini to transform 2D floor plans into photorealistic 3D renders with permanent hosting and persistent metadata. This project features 2D-to-3D photorealistic rendering, serverless workers, high-performance KV storage, and a global community feed.
 
-If you're getting started and need assistance or face any bugs, join our active Discord community with over **50k+** members. It's a place where people help each other out.
+## 🆕 <a name="new-features">New Features</a>
 
-<a href="https://discord.com/invite/n6EdbFJ" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/618f4872-1e10-42da-8213-1d69e486d02e" /></a>
+> Extended by **Muhammad Hamid Ali Khalid**
+
+### 🎨 Room Style Presets
+Choose from 6 curated design styles — **Modern**, **Minimalist**, **Industrial**, **Scandinavian**, **Japandi**, and **Luxury** — each with a unique set of AI-enhancing keywords. Selecting a preset automatically enriches the AI prompt with style-specific vocabulary so the generated render matches your design intent. A purple-glowing selection state and inline hint message confirm the preset is active. Clear the selection at any time.
+
+### 🌙 Dark / Light Mode Toggle
+A smooth animated toggle button in the navbar switches the entire app between a deep **dark mode** (charcoal + purple) and a clean **light mode**. The chosen theme persists across sessions via `localStorage` under the key `vista-theme` and is applied instantly using CSS custom properties on `document.documentElement`. The toggle thumb slides left/right with a CSS transition and shows a moon 🌙 or sun ☀️ emoji.
+
+### 📐 Room Dimension Calculator
+A collapsible panel (triggered by a **📐 Room Calculator** button) lets users enter room dimensions before generating. Supports **Imperial (ft)** and **Metric (m)** unit modes. Enter **Length**, **Width**, and **Ceiling Height**, and see live calculations for:
+- Floor Area
+- Wall Area
+- Flooring Needed (floor area × 1.1 for 10% waste)
+- Perimeter
+
+Click **✦ Add dimensions to AI prompt** to append a formatted dimension summary to the render prompt, giving the AI spatial context for a more accurate visualization.
 
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 - **[React](https://react.dev/)** is a popular JavaScript library for building user interfaces, specifically for creating single-page applications with a component-based architecture.
@@ -62,8 +71,6 @@ If you're getting started and need assistance or face any bugs, join our active 
 - **[Puter.js](https://jsm.dev/roomify-puterjs)** is the official JavaScript SDK that allows developers to interact with those cloud services directly from the frontend.
 
 - **[CodeRabbit](https://jsm.dev/roomify-coderabbit)** is an AI-powered code review platform that provides deep insights and automated suggestions to improve code quality and security.
-
-- **[Junie by JetBRains](https://jsm.dev/roomify-junie)** is an AI-driven coding assistant integrated into the development environment to help automate complex logic, refactoring, and prompt engineering.
 
 - **[Claude](https://www.anthropic.com/claude)** and **[Gemini](https://deepmind.google/technologies/gemini/)** are state-of-the-art large language models used to power the architectural transformation and image generation logic within the application.
 
@@ -84,7 +91,6 @@ If you're getting started and need assistance or face any bugs, join our active 
 👉 **Ownership Mapping**: A clean metadata system that tracks project details and user IDs across the entire platform for seamless account management.
 
 👉 **Modern Export Functionality**: High-performance tools to download and move AI-generated renders into real-world presentations and workflows.
-
 
 And many more, including code architecture and reusability.
 
